@@ -42,32 +42,42 @@ ui <- fluidPage(
    titlePanel("Generate some text similar to a yelp review!"),
    
    # Sidebar
-   sidebarLayout(position = "right",
-                 sidebarPanel(h3("sidebar filler text for now"),
-                              br(),
-                              br(),
-                              br(),
-                              p("<-- see left.")
-                              ),
-                mainPanel(
-                  h3("insert your own text here"),
-                  br(),
-                  p("Why so? Just so you can see what user generated yelp reviews look like
-                    \n according to some algorithms!"),
-                  br()
-                ) # end main panel
-      ),
+   # sidebarLayout(position = "right",
+   #               sidebarPanel(h3("sidebar filler text for now"),
+   #                            br(),
+   #                            br(),
+   #                            br(),
+   #                            p("<-- see left.")
+   #                            ), # end sidebar content
+    mainPanel(
+      # h3("insert your own text here"),
+      br(),
+      p("Try your hand at generating some text similar to a Yelp Review!
+        (according to some algorithms!)"),
+      br(),
+      br(),
+      p("Constructed at R-Ladies SF by @leecourt98, 2019-05-18.")
+    ),  # end main panel
   
+   # start fluidrow
       fluidRow( 
-       textInput("text", h3("Text input"), 
-               value = "Enter text...") 
+
         ), # end fluid row
+   
       
-      # Show a plot of the generated distribution
+      # Show all of our inputs and outputs
       mainPanel(
+        
+        textInput("text", h3("Your text input"), 
+                  value = "Enter text..."), 
+        
+        actionButton("go", "Generate the Yelp text!"),
+        
+        
+        h4("Your seed text is: "), 
         textOutput("string_var"),
         br(),
-        h4("...and here's our output:"),
+        h4("...and here's our algorithmically generated output:"),
         br(),
         textOutput("generated_yelp_text")
       ) #end main panel
@@ -75,19 +85,26 @@ ui <- fluidPage(
 
    ) # end fluid page
 
-# Define server logic required to draw a histogram
+# Define server logic required to produce the machine generated yelp text
 server <- function(input, output) {
   
+  generated_text <- eventReactive(input$go, {
+    withProgress({
+      setProgress(message = "Processing seed text...")
+      generate_yelp_text(input$text)
+    }) # end withProgress
+  }) # end generated_text block
+  
   output$string_var <- renderText({
-    paste("Your seed text is: ", input$text)
+    paste(input$text)
   }) # end  output$string_var
 
+  output$generated_yelp_text <- renderText({
+    paste(
+        generated_text()
+    ) #end paste
+  }) # end render text
   
-  output$generated_yelp_text <- renderText(
-    paste("Your generated yelp text is: \n",
-          generate_yelp_text(input$text)
-          ) #end paste
-  ) # end render text
 } # end server function
 
 # Run the application 
