@@ -1,7 +1,7 @@
 
 # first-shiny-app-model-asset-exchange
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=shiny/shiny-app/)
 
 first constructed at R-Ladies SF model asset exchange hackathon 
 2019-05-18
