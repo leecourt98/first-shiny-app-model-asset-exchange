@@ -1,9 +1,9 @@
 
 # first-shiny-app-model-asset-exchange
 
-[![RStudio](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=rstudio)
+RStudio: [![RStudio](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=rstudio)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=shiny/shiny-app/)
+R Shiny: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=shiny/shiny-app/)
 
 first constructed at R-Ladies SF model asset exchange hackathon 
 2019-05-18
