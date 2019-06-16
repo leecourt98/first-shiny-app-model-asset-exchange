@@ -1,7 +1,7 @@
 
 # first-shiny-app-model-asset-exchange
 
-[[!RStudio](https://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=rstudio)
+[![RStudio](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=rstudio)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leecourt98/first-shiny-app-model-asset-exchange/master?urlpath=shiny/shiny-app/)
 
