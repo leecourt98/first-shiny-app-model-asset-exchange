@@ -17,5 +17,6 @@ packaged with mybinder.org
 
 2019-06-15
 
-Goals: \\
+Goals:
+
 Pick an algorithm from the Model Asset Exchange (MAX) and give it a use case by packaging with R Shiny.
